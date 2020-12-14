@@ -57,7 +57,7 @@
 
 3. 分块举例：
 
-   ![image-20201214001434367](.\assets\分块.png)
+   ![image-20201214001434367](https://github.com/73-SEVENTYTHREE/Operating-System-Paper-Reading/blob/main/assets/分块.png)
 
    * a是原始文件的数据块的划分。
    * b是在a的基础上，在c<sub>4</sub>块中添加一部分变成新块c<sub>8</sub>
@@ -103,7 +103,7 @@
 
 3. 读取流程：
 
-   ![image-20201214014038497](.\assets\读取流程.png)
+   ![image-20201214014038497](https://github.com/73-SEVENTYTHREE/Operating-System-Paper-Reading/blob/main/assets/读取流程.png)
 
    * 客户端先向服务器发送获取哈希值的请求；
    * 服务器计算哈希值，返回给客户端；
@@ -132,7 +132,7 @@
 
    * 写入流程：
 
-     ![image-20201214021828415](.\assets\写入流程.png)
+     ![image-20201214021828415](https://github.com/73-SEVENTYTHREE/Operating-System-Paper-Reading/blob/main/assets/写入流程.png)
 
      * 客户端关闭文件后先向服务器发送创建临时文件的RPC和CONDWRITE RPC；
      * 服务器创建临时文件，并在本地寻找哈希值相同的数据块，sha2没找到就返回未找到的标识符；
@@ -151,7 +151,7 @@
 
 1. 客户端使用xfs实现文件系统，服务器通过NFS访问文件，客户端和服务器使用Sun RPC通过TCP进行通信。LBFS对服务器和客户端之间的流量出了支持身份验证和加密，还支持压缩。架构图如下：
 
-   ![image-20201214110527840](.\assets\架构.png)
+   ![image-20201214110527840](https://github.com/73-SEVENTYTHREE/Operating-System-Paper-Reading/blob/main/assets/架构.png)
 
 ##### 块索引
 
@@ -183,13 +183,13 @@
 
 1. emacs在软件开发工作负载下文件的共同点（可以看到这些重复率还是很高的）：
 
-![image-20201214122819168](.\assets\emacs文件表.png)
+![image-20201214122819168](https://github.com/73-SEVENTYTHREE/Operating-System-Paper-Reading/blob/main/assets/emacs文件表.png)
 
 2. LBFS适用于后记文档预览，比如调整方程式等，不适合文档的大量修改，除非页面按章编号。
 
 3. 分块算法的实际效果：
 
-![image-20201214123910800](.\assets\实际效果.png)
+![image-20201214123910800](https://github.com/73-SEVENTYTHREE/Operating-System-Paper-Reading/blob/main/assets/实际效果.png)
 
 * 总数据大小为354MB，分成了42,466块；
 
@@ -197,7 +197,7 @@
 * 中位数为5.8K，平均数为8,570字节，接近预期的8,240字节；
 * 由于最大最小块的限制，抑制了11,379个断点，插入了75个断点；
 * 最后的有小于2K的块，因为有小于2K的文件和正好碰到了文件边界。
-* 分块的通用性：![image-20201214124708977](.\assets\分块通用性结果.png)，虽然小块会有更强的通用性，但是，哈希和传输的成本也增加了，所以窗口大小对通用性的影响不大。
+* 分块的通用性：![image-20201214124708977](https://github.com/73-SEVENTYTHREE/Operating-System-Paper-Reading/blob/main/assets/分块通用性结果.png)，虽然小块会有更强的通用性，但是，哈希和传输的成本也增加了，所以窗口大小对通用性的影响不大。
 
 ##### 实际工作负载
 
@@ -209,7 +209,7 @@
 
 2. 三个工作负载的实际表现（客户端写入服务器和从服务端读取数据的表现，后面还有每个文件系统表现的具体的原因分析，就不放出来了）：
 
-   ![image-20201214135548755](.\assets\负载实际表现.png)
+   ![image-20201214135548755](https://github.com/73-SEVENTYTHREE/Operating-System-Paper-Reading/blob/main/assets/负载实际表现.png)
 
 #### 总结
 
